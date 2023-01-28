@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <!-- Inicio -->
+                <prop key="index.htm">indexBean</prop>
+                <prop key="Acerca de.htm">AcercaController</prop>
+                <prop key="Contenido.htm">ContenidoBean</prop>
+                <prop key="Temas.htm">TemasController</prop>
+
+                <!-- Temas -->
+                <prop key="Navegacion.htm">NavegacionController</prop>
+                <prop key="Anime.htm">AnimeController</prop>
+                <prop key="Caricaturas.htm">CaricaturasController</prop>
+                <prop key="Series.htm">SeriesController</prop>
+                <prop key="Peliculas.htm">PeliculasController</prop>
+
+                <!-- Usuario -->
+                <prop key="altaUsuario.htm">usuarioBean</prop>
+                <prop key="editarUsuario.htm">usuarioBean</prop>
+                <prop key="listaUsuario.htm">usuarioBean</prop>
+                <prop key="login.htm">usuarioBean</prop>
+
+                <!-- Pais -->
+                <prop key="altaPais.htm">paisBean</prop>
+                <prop key="editarPais.htm">paisBean</prop>
+                <prop key="eliminarPais.htm">paisBean</prop>
+                <prop key="listaPais.htm">paisBean</prop>
+
+                <!-- Productora -->
+                <prop key="altaProductora.htm">productoraBean</prop>
+                <prop key="listaProductora.htm">productoraBean</prop>
+                <prop key="editarProductora.htm">productoraBean</prop>
+                <prop key="eliminarProductora.htm">productoraBean</prop>
+
+                <!-- Genero -->
+                <prop key="altaGenero.htm">generoBean</prop>
+                <prop key="listaGenero.htm">generoBean</prop>
+
+                <!-- Estudio -->
+                <prop key="altaEstudio.htm">estudioBean</prop>
+                <prop key="listaEstudio.htm">estudioBean</prop>
+                <prop key="listaEstudio2.htm">estudioBean</prop>
+                <prop key="buscarEstudio.htm">estudioBean</prop>
+                <prop key="buscarEstudio2.htm">estudioBean</prop>
+                <prop key="editarEstudio.htm">estudioBean</prop>
+                <prop key="eliminarEstudio.htm">estudioBean</prop>
+
+                <!-- Clasificacion -->
+                <prop key="altaClasificacion.htm">clasificacionBean</prop>
+                <prop key="listaClasificacion.htm">clasificacionBean</prop>
+
+                <!-- Director -->
+                <prop key="altaDirector.htm">directorBean</prop>
+                <prop key="altaDirectorInactivo.htm">directorBean</prop>
+                <prop key="editarDirector.htm">directorBean</prop>
+                <prop key="editarDirectorInactivo.htm">directorBean</prop>
+                <prop key="eliminarDirector.htm">directorBean</prop>
+                <prop key="listaDirector.htm">directorBean</prop>
+
+                <!-- Pelicula -->
+                <prop key="altaPelicula.htm">peliculaBean</prop>
+                <prop key="altaPelicula1.htm">peliculaBean</prop>
+                <prop key="editarPelicula.htm">peliculaBean</prop>
+                <prop key="eliminarPelicula.htm">peliculaBean</prop>
+                <prop key="listaPelicula.htm">peliculaBean</prop>
+                <prop key="buscarPelicula.htm">peliculaBean</prop>
+                <prop key="buscaPeliculaAnime.htm">peliculaBean</prop>
+                
+                <!-- Pelicula Anime -->
+                <prop key="altaPeliculaAnime.htm">peliculaAnimeBean</prop>
+                <prop key="editarPeliculaAnime.htm">peliculaAnimeBean</prop>
+                <prop key="eliminarPeliculaAnime.htm">peliculaAnimeBean</prop>
+                <prop key="listaPeliculaAnime.htm">peliculaAnimeBean</prop>
+                <prop key="buscarPeliculaAnime.htm">peliculaAnimeBean</prop>
+
+                <!-- Series -->
+                <prop key="altaSerie.htm">serieBean</prop>
+                <prop key="editarSerie.htm">serieBean</prop>
+                <prop key="eliminarSerie.htm">serieBean</prop>
+                <prop key="listaSerie.htm">serieBean</prop>
+                <prop key="buscaTemporadaSerie.htm">serieBean</prop>
+                <prop key="buscaTemporadaSerie2.htm">serieBean</prop>
+
+                <!-- Temporada Series -->
+                <prop key="altaTemporadaSerie.htm">temporadaSerieBean</prop>
+                <prop key="altaTemporadaSerieEmision.htm">temporadaSerieBean</prop>
+                <prop key="editarTemporadaSerie.htm">temporadaSerieBean</prop>
+                <prop key="editarTemporadaSerieEmision.htm">temporadaSerieBean</prop>
+                <prop key="eliminarTemporadaSerie.htm">temporadaSerieBean</prop>
+                <prop key="listaTemporadaSerie.htm">temporadaSerieBean</prop>
+
+                <!-- Caricaturas -->
+                <prop key="altaCaricatura.htm">caricaturaBean</prop>
+                <prop key="editarCaricatura.htm">caricaturaBean</prop>
+                <prop key="eliminarCaricatura.htm">caricaturaBean</prop>
+                <prop key="listaCaricatura.htm">caricaturaBean</prop>
+                <prop key="buscaTemporadaCaricatura.htm">caricaturaBean</prop>
+                <prop key="buscaTemporadaCaricatura2.htm">caricaturaBean</prop>
+                <prop key="buscaPeliculaCaricatura.htm">caricaturaBean</prop>
+
+                <!-- Temporada Caricaturas -->
+                <prop key="altaTemporadaCaricatura.htm">temporadaCaricaturaBean</prop>
+                <prop key="altaTemporadaCaricaturaEmision.htm">temporadaCaricaturaBean</prop>
+                <prop key="editarTemporadaCaricatura.htm">temporadaCaricaturaBean</prop>
+                <prop key="editarTemporadaCaricaturaEmision.htm">temporadaCaricaturaBean</prop>
+                <prop key="eliminarTemporadaCaricatura.htm">temporadaCaricaturaBean</prop>
+                <prop key="listaTemporadaCaricatura.htm">temporadaCaricaturaBean</prop>
+
+                <!-- Temporada Emision -->
+                <prop key="altaTemporadasEmision.htm">TemporadasEmisionBean</prop>
+                <prop key="editarTemporadasEmision.htm">TemporadasEmisionBean</prop>
+                <prop key="eliminarTemporadasEmision.htm">TemporadasEmisionBean</prop>
+                <prop key="listaTemporadasEmision.htm">TemporadasEmisionBean</prop>
+                <prop key="buscarAnimesTemporada.htm">TemporadasEmisionBean</prop>
+                <prop key="buscarAnimesTemporada2.htm">TemporadasEmisionBean</prop>
+
+                <!-- Anime -->
+                <prop key="altaAnime.htm">animeBean</prop>
+                <prop key="editarAnime.htm">animeBean</prop>
+                <prop key="eliminarAnime.htm">animeBean</prop>
+                <prop key="listaAnime.htm">animeBean</prop>
+                <prop key="buscaTemporadaAnime.htm">animeBean</prop>
+                <prop key="buscaTemporadaAnime2.htm">animeBean</prop>
+
+                <!-- Temporadas Anime -->
+                <prop key="altaTemporadaAnime.htm">TemporadasAnimeBean</prop>
+                <prop key="altaTemporadaAnimeEmision.htm">TemporadasAnimeBean</prop>
+                <prop key="editarTemporadaAnime.htm">TemporadasAnimeBean</prop>
+                <prop key="editarTemporadaAnimeEmision.htm">TemporadasAnimeBean</prop>
+                <prop key="eliminarTemporadaAnime.htm">TemporadasAnimeBean</prop>
+                <prop key="listaTemporadaAnime.htm">TemporadasAnimeBean</prop>
+
+                <!-- Auditorias -->
+                <prop key="listaAuditoriaUsuario.htm">auditoriaUsuarioBean</prop>
+                
+                <prop key="listaAuditoriaDirector.htm">auditoriaDirectorBean</prop>
+                <prop key="listaAuditoriaPelicula.htm">auditoriaPeliculaBean</prop>
+
+                <prop key="listaAuditoriaSerie.htm">auditoriaSerieBean</prop>
+                <prop key="listaAuditoriaTemporadaSerie.htm">auditoriaTemporadaSerieBean</prop>
+
+                <prop key="listaAuditoriaCaricatura.htm">auditoriaCaricaturaBean</prop>
+                <prop key="listaAuditoriaTemporadaCaricatura.htm">auditoriaTemporadaCaricaturaBean</prop>
+
+                <prop key="listaAuditoriaTemporadasEmision.htm">auditoriaTemporadasEmisionBean</prop>
+                <prop key="listaAuditoriaAnime.htm">auditoriaAnimeBean</prop>
+                <prop key="listaAuditoriaTemporadaAnime.htm">auditoriaTemporadasAnimeBean</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <!-- Inicio -->
+    <bean name="indexBean" class="controller.controladorIndex" />
+    <bean name="ContenidoBean" class="controller.controladorContenido" />
+    <bean name="usuarioBean" class="controller.controladorUsuario" />
+
+    <!-- Auditorias -->
+    <bean name="auditoriaUsuarioBean" class="controller.controladorAuditoriaUsuario" />
+    
+    <bean name="auditoriaDirectorBean" class="controller.controladorAuditoriaDirector" />
+    <bean name="auditoriaPeliculaBean" class="controller.controladorAuditoriaPeliculas" />
+    
+    <bean name="auditoriaSerieBean" class="controller.controladorAuditoriaSerie" />
+    <bean name="auditoriaTemporadaSerieBean" class="controller.controladorAuditoriaTemporadaSerie" />
+    
+    <bean name="auditoriaCaricaturaBean" class="controller.controladorAuditoriaCaricatura" />
+    <bean name="auditoriaTemporadaCaricaturaBean" class="controller.controladorAuditoriaTemporadaCaricatura" />
+    
+    <bean name="auditoriaTemporadasEmisionBean" class="controller.controladorAuditoriaTemporadasEmision" />
+    <bean name="auditoriaAnimeBean" class="controller.controladorAuditoriaAnime" />
+    <bean name="auditoriaTemporadasAnimeBean" class="controller.controladorAuditoriaTemporadaAnime" />
+
+    <!-- Apartados -->
+    <bean name="paisBean" class="controller.controladorPais" />
+    <bean name="productoraBean" class="controller.controladorProductora" />
+    <bean name="generoBean" class="controller.controladorGenero" />
+    <bean name="estudioBean" class="controller.controladorEstudio" />
+    <bean name="clasificacionBean" class="controller.controladorClasificacion" />
+    <bean name="directorBean" class="controller.controladorDirector" />
+
+    <!-- Temas -->
+    <bean name="peliculaBean" class="controller.controladorPelicula" />
+    <bean name="peliculaAnimeBean" class="controller.controladorPeliculaAnime" />
+
+    <bean name="serieBean" class="controller.controladorSeries" />
+    <bean name="temporadaSerieBean" class="controller.controladorTemporadasSeries" />
+
+    <bean name="caricaturaBean" class="controller.controladorCaricatura" />
+    <bean name="temporadaCaricaturaBean" class="controller.controladorTemporadasCaricatura" />
+
+    <bean name="TemporadasEmisionBean" class="controller.controladorTemporadasEmision" />
+    <bean name="animeBean" class="controller.controladorAnime" />
+    <bean name="TemporadasAnimeBean" class="controller.controladorTemporadasAnime" />
+
+    <!-- Inicio -->
+    <bean name="AcercaController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Acerca de" />
+    <bean name="TemasController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Temas" />
+    <bean name="NavegacionController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Navegacion" />
+
+    <!-- Menu -->
+    <bean name="AnimeController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Anime" />
+    <bean name="CaricaturasController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Caricaturas" />
+    <bean name="SeriesController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Series" />
+    <bean name="PeliculasController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="Peliculas" />
+</beans>
