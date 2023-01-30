@@ -131,7 +131,7 @@
                         <p style="font-weight: bold;">Calificacion</p>
                         <p>${dato.Calificacion}</p>
 
-                        <a class="btn btn-outline-success"
+                        <a class="btn btn-outline-success" target="_blank"
                             href="editarTemporadaAnime.htm?idTemporada=${dato.idTemporada}">
                             Editar Temporada
                         </a>

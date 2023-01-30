@@ -65,7 +65,7 @@
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header py-5 mb-3 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <h1 class="display-4 text-white animated slideInDown mb-3">Anime</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -131,7 +131,7 @@
                         <p style="font-weight: bold;">Calificacion</p>
                         <p>${dato.Calificacion}</p>
 
-                        <a class="btn btn-outline-success"
+                        <a class="btn btn-outline-success" target="_blank"
                             href="editarTemporadaAnime.htm?idTemporada=${dato.idTemporada}">
                             Editar Temporada
                         </a>
@@ -189,7 +189,7 @@
                         <p style="font-weight: bold;">Calificacion</p>
                         <p>${dato.Calificacion}</p>
 
-                        <a class="btn btn-outline-success"
+                        <a class="btn btn-outline-success" target="_blank"
                             href="editarTemporadaAnime.htm?idTemporada=${dato.idTemporada}">
                             Editar Temporada
                         </a>

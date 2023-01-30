@@ -81,7 +81,7 @@
     <div class="col-md-5 offset-md-3 text-white">
         <div class="card">
             <div class="card-header bg-success">
-                <h3 class="text-white text-center">Actualiza Temporada Anime</h3>
+                <h3 class="text-white text-center">Actualizar Temporada Anime</h3>
                 <div style="float: right">
                     <a class="btn btn-outline-light"
                         href="editarTemporadaAnime.htm?idTemporada=${Lista[0].idTemporada}">Finalizado</a>

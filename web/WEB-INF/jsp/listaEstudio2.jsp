@@ -138,7 +138,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="buscarEstudio.htm?idEstudio=${dato.idEstudio}" class="btn btn-success">
+                                <a target="_blank" href="buscarEstudio.htm?idEstudio=${dato.idEstudio}" class="btn btn-success">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-search" viewBox="0 0 16 16">
                                         <path

@@ -122,25 +122,25 @@
                     <h6>Productora / Distribuidora</h6>
                     <span>Es el canal en donde se transmite la caricatura.</span>
                 </div>
-
-                <!-- Pelicula -->
-                <div class="project-item border rounded h-100 p-4" data-dot="05">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/Series/Pelicula.jpg" alt="">
-                        <a href="listaPelicula.htm"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>Pelicula</h6>
-                    <span>Es el filme en donde se narra una historia con respecto a una Serie.</span>
-                </div>
                 
                 <!-- Genero -->
-                <div class="project-item border rounded h-100 p-4" data-dot="06">
+                <div class="project-item border rounded h-100 p-4" data-dot="05">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/Series/Genero.jpg" alt="">
                         <a href="listaGenero.htm"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
                     <h6>Genero</h6>
                     <span>El tema general que sirve para su clasificación.</span>
+                </div>
+
+                <!-- Pelicula -->
+                <div class="project-item border rounded h-100 p-4" data-dot="06">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/Series/Pelicula.jpg" alt="">
+                        <a href="listaPelicula.htm"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Pelicula</h6>
+                    <span>Es el filme en donde se narra una historia con respecto a una Serie.</span>
                 </div>
             </div>
         </div>

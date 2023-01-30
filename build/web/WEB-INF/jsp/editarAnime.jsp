@@ -81,7 +81,7 @@
     <div class="col-md-5 offset-md-3 text-white">
         <div class="card">
             <div class="card-header bg-success">
-                <h3 class="text-white text-center">Actualiza Anime</h3>
+                <h3 class="text-white text-center">Actualizar Anime</h3>
             </div>
             <div class="card-body bg-dark">
                 <form method="POST">

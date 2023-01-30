@@ -104,7 +104,7 @@
             <div class="card text-center bg-dark scrollmenu">
                 <div class="card-body text-white">
                     <div class="card-header text-white d-flex justify-content-between align-items-center text-center">
-                        <a class="btn btn-outline-success" href="editarSerie.htm?idSerie=${Nombre[0].idSerie}">
+                        <a target="_blank" class="btn btn-outline-success" href="editarSerie.htm?idSerie=${Nombre[0].idSerie}">
                             Editar Serie</a>
                     </div>
                     <p style="font-weight: bold;">Nombre Secundario</p>
@@ -165,7 +165,7 @@
                         <p style="font-weight: bold;">Última Emision</p>
                         <p>${dato.FechaFin}</p>
 
-                        <a class="btn btn-outline-success"
+                        <a class="btn btn-outline-success" target="_blank"
                             href="editarTemporadaSerie.htm?idTemporada=${dato.idTemporada}">
                             Editar Temporada
                         </a>

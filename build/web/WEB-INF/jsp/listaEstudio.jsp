@@ -106,7 +106,7 @@
                     <div class="card-header text-white d-flex justify-content-between align-items-center text-center">
                         ${dato.Nombre}
                         <div style="float: right;">
-                            <a href="buscarEstudio2.htm?idEstudio=${dato.idEstudio}" class="btn btn-success">
+                            <a target="_blank" href="buscarEstudio2.htm?idEstudio=${dato.idEstudio}" class="btn btn-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-search" viewBox="0 0 16 16">
                                     <path

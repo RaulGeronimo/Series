@@ -149,7 +149,7 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="editarTemporadaAnime.htm?idTemporada=${dato.idTemporada}"
+                                <a href="editarTemporadaAnime.htm?idTemporada=${dato.idTemporada}" target="_blank"
                                     class="btn btn-warning">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
