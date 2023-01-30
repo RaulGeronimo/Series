@@ -32,16 +32,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Datatables -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css"
-        type="text/css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.semanticui.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css">
-    <link rel="stylesheet" href="css/datatables.css" type="text/css">
-    <link rel="stylesheet" href="css/buttons.dataTables.min.css" type="text/css">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
@@ -76,7 +66,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="Anime.htm">Anime</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Caricaturas</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;" href="Caricaturas.htm">Caricaturas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Peliculas.htm">Peliculas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Series.htm">Series</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="listaUsuario.htm">Usuarios</a></li>

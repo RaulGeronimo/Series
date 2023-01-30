@@ -75,7 +75,7 @@
             <h1 class="display-4 text-white animated slideInDown mb-3">Anime</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Anime</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;" href="Anime.htm">Anime</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Caricaturas.htm">Caricaturas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Peliculas.htm">Peliculas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Series.htm">Series</a></li>

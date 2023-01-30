@@ -77,7 +77,7 @@
                     <li class="breadcrumb-item"><a class="text-white" href="Caricaturas.htm">Caricaturas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Peliculas.htm">Peliculas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Series.htm">Series</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Usuarios</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;" href="listaUsuario.htm">Usuarios</a></li>
                 </ol>
             </nav>
         </div>

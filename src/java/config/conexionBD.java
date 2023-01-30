@@ -18,7 +18,7 @@ public class conexionBD {
         
         dataSource.setUrl("jdbc:mysql://localhost:3306/Series");
         dataSource.setUsername("root");
-        //dataSource.setPassword("1829301");
+        dataSource.setPassword("");
         return dataSource;
     }
 }
