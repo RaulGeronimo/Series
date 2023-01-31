@@ -70,7 +70,8 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="Anime.htm">Anime</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;" href="Caricaturas.htm">Caricaturas</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;"
+                            href="Caricaturas.htm">Caricaturas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Peliculas.htm">Peliculas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Series.htm">Series</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="listaUsuario.htm">Usuarios</a></li>
@@ -88,7 +89,8 @@
                 <a class="btn btn-outline-light" href="altaTemporadaCaricatura.htm">Agregar Registro</a>
                 <a href="listaCaricatura.htm" class="btn btn-outline-light">Regresar</a>
                 <a class="btn btn-outline-light" href="listaAuditoriaTemporadaCaricatura.htm">Ver Cambios</a>
-                <a class="btn btn-outline-light" href="buscaTemporadaCaricatura.htm?idCaricatura=${Nombre[0].idCaricatura}">Otra
+                <a class="btn btn-outline-light"
+                    href="buscaTemporadaCaricatura.htm?idCaricatura=${Nombre[0].idCaricatura}">Otra
                     Vista</a>
             </div>
         </div>
@@ -104,7 +106,8 @@
             <div class="card text-center bg-dark scrollmenu">
                 <div class="card-body text-white">
                     <div class="card-header text-white d-flex justify-content-between align-items-center text-center">
-                        <a target="_blank" class="btn btn-outline-success" href="editarCaricatura.htm?idCaricatura=${Nombre[0].idCaricatura}">
+                        <a target="_blank" class="btn btn-outline-success"
+                            href="editarCaricatura.htm?idCaricatura=${Nombre[0].idCaricatura}">
                             Editar Caricatura</a>
                     </div>
                     <p style="font-weight: bold;">Nombre Secundario</p>
@@ -175,6 +178,24 @@
         </c:forEach>
     </div>
     <!-- Card Fin -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="index.htm" target="_blank">Series</a>, CU UAEM Valle de Chalco.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By: Raúl Gerónimo </a>
+                        <br>Proyecto de Vacaciones
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i

@@ -29,23 +29,6 @@ public class controladorAuditoriaDirector {
 
     @RequestMapping("listaAuditoriaDirector.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Auditoria_Director.id,\n"
-                + "Auditoria_Director.Nombre,\n"
-                + "Auditoria_Director.Apellidos,\n"
-                + "Auditoria_Director.NombreArtistico,\n"
-                + "DATE_FORMAT(Auditoria_Director.FechaNacimiento, \"%d / %b / %Y\") AS FechaNacimiento,\n"
-                + "DATE_FORMAT(Auditoria_Director.FechaDefuncion, \"%d / %b / %Y\") AS FechaDefuncion,\n"
-                + "Auditoria_Director.Sexo,\n"
-                + "FORMAT(Auditoria_Director.Estatura, 2) AS Estatura,\n"
-                + "Pais.Nombre AS Pais,\n"
-                + "Auditoria_Director.Usuario,\n"
-                + "DATE_FORMAT(Auditoria_Director.Modificado, \"%d / %b / %Y - %r\") AS Modificado,\n"
-                + "Auditoria_Director.Proceso,\n"
-                + "Auditoria_Director.idDirector\n"
-                + "FROM Auditoria_Director\n"
-                + "INNER JOIN Pais\n"
-                + "ON Auditoria_Director.Nacionalidad = Pais.idPais";*/
         String cambios = "SELECT * FROM Vista_Cambios_Director";
         datos = this.jdbc.queryForList(cambios);
         mav.addObject("Lista", datos);

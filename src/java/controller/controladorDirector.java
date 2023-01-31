@@ -93,22 +93,6 @@ public class controladorDirector {
 
     @RequestMapping("listaDirector.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Director.idDirector,\n"
-                + "Director.NombreArtistico,\n"
-                + "Director.Nombre,\n"
-                + "Director.Apellidos,\n"
-                + "DATE_FORMAT(Director.FechaNacimiento, \"%d / %b / %Y\") AS FechaNacimiento,\n"
-                + "DATE_FORMAT(Director.FechaDefuncion, \"%d / %b / %Y\") AS FechaDefuncion,\n"
-                + "IF (Director.Sexo = 'H', 'Hombre', 'Mujer') AS Sexo,\n"
-                + "IF (Director.FechaNacimiento >= Director.FechaDefuncion, \"Fecha Invalida\", TIMESTAMPDIFF(Year, Director.FechaNacimiento, (IFNULL(Director.FechaDefuncion, NOW())))) AS Edad,\n"
-                + "FORMAT(Director.Estatura, 2) AS Estatura,\n"
-                + "IF(IFNULL(Director.FechaDefuncion, 'ACTIVO') = 'ACTIVO', 'Activo', 'Inactivo') AS Estado,\n"
-                + "CONCAT_WS(' - ', Pais.Nombre, Pais.Nacionalidad) AS Pais\n"
-                + "FROM Director\n"
-                + "INNER JOIN Pais\n"
-                + "ON Director.Nacionalidad = Pais.idPais\n"
-                + "ORDER BY Director.Nombre";*/
         String director = "SELECT * FROM Vista_Directores\n";
         datos = this.jdbc.queryForList(director);
         mav.addObject("Lista", datos);
@@ -116,47 +100,6 @@ public class controladorDirector {
         mav.setViewName("listaDirector");
         return mav;
     }
-
-    /*@RequestMapping(value = "buscaDirectorCaricatura.htm", method = RequestMethod.GET)
-    public ModelAndView BuscarPelicula(HttpServletRequest request) {
-        idDirector = Integer.parseInt(request.getParameter("idDirector"));
-
-        //Caricatura
-        String sql2 = "SELECT\n"
-                + "Director.idDirector,\n"
-                + "Director.NombreArtistico,\n"
-                + "Director.Nombre,\n"
-                + "COUNT(Caricatura.idCaricatura) AS Caricatura,\n"
-                + "Director.Apellidos AS Apellidos,\n"
-                + "DATE_FORMAT(Director.FechaNacimiento, \"%d / %b / %Y\") AS FechaNacimiento,\n"
-                + "CASE\n"
-                + "WHEN Director.Sexo = 'H' THEN 'Masculino'\n"
-                + "ELSE 'Femenino'\n"
-                + "END AS Sexo,\n"
-                + "TIMESTAMPDIFF(Year, Director.FechaNacimiento, NOW()) AS Edad,\n"
-                + "FORMAT(Director.Estatura, 2) AS Estatura,\n"
-                + "Director.Pais\n"
-                + "FROM Director\n"
-                + "INNER JOIN Caricatura\n"
-                + "ON Caricatura.idDirector = Director.idDirector\n"
-                + "GROUP BY (Director.idDirector)\n"
-                + "ORDER BY Director.NombreArtistico";
-        datos = this.jdbc.queryForList(sql2);
-        mav.addObject("ListaCaricatura", datos);
-
-        //Pelicula
-        String sql3 = "SELECT * FROM Peliculas\n";
-        datos = this.jdbc.queryForList(sql3);
-        mav.addObject("ListaPelicula", datos);
-
-        //Serie
-        String sql4 = "SELECT * FROM Series\n";
-        datos = this.jdbc.queryForList(sql4);
-        mav.addObject("ListaSerie", datos);
-
-        mav.setViewName("buscaDirectorCaricatura");
-        return mav;
-    }*/
 
 /////ACTIVO
     @RequestMapping(value = "editarDirector.htm", method = RequestMethod.GET)

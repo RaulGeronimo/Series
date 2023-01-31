@@ -29,22 +29,6 @@ public class controladorAuditoriaTemporadaCaricatura {
 
     @RequestMapping("listaAuditoriaTemporadaCaricatura.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT \n"
-                + "Auditoria_Temporadas_Caricatura.id,\n"
-                + "Caricatura.Nombre AS Caricatura,\n"
-                + "Auditoria_Temporadas_Caricatura.Nombre,\n"
-                + "Auditoria_Temporadas_Caricatura.Capitulos,\n"
-                + "Auditoria_Temporadas_Caricatura.Duracion,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 1)) AS Calificacion,\n"
-                + "DATE_FORMAT(FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "DATE_FORMAT(FechaFin, \"%d / %b / %Y\") AS FechaFin,\n"
-                + "Auditoria_Temporadas_Caricatura.Usuario,\n"
-                + "DATE_FORMAT(Modificado, \"%d / %b / %Y - %r\") AS Modificado,\n"
-                + "Auditoria_Temporadas_Caricatura.Proceso,\n"
-                + "Auditoria_Temporadas_Caricatura.idTemporada\n"
-                + "FROM Auditoria_Temporadas_Caricatura\n"
-                + "INNER JOIN Caricatura\n"
-                + "ON Auditoria_Temporadas_Caricatura.idCaricatura = Caricatura.idCaricatura";*/
         String cambios = "SELECT * FROM Vista_Cambios_Temporadas_Caricatura";
         datos = this.jdbc.queryForList(cambios);
         mav.addObject("Lista", datos);

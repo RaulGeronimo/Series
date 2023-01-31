@@ -29,16 +29,6 @@ public class controladorAuditoriaAnime {
 
     @RequestMapping("listaAuditoriaAnime.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "id,\n"
-                + "Nombre,\n"
-                + "OtrosNombres,\n"
-                + "Genero,\n"
-                + "Usuario,\n"
-                + "DATE_FORMAT(Modificado, \"%d / %b / %Y - %r\") AS Modificado,\n"
-                + "Proceso,\n"
-                + "idAnime\n"
-                + "FROM Auditoria_Anime";*/
         String cambios = "SELECT * FROM Vista_Cambios_Anime";
         datos = this.jdbc.queryForList(cambios);
         mav.addObject("Lista", datos);

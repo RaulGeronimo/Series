@@ -124,7 +124,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa bi-laptop fa-4x text-primary mb-4"></i>
-                        <a href="listaAnime.htm"><h5 class="mb-3">Animes</h5></a>
+                        <a href="listaAnime.htm">
+                            <h5 class="mb-3">Animes</h5>
+                        </a>
                         <c:forEach var="dato" items="${ListaAnime}">
                             <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Anime}</h1>
                         </c:forEach>
@@ -133,7 +135,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-users fa-4x text-primary mb-4"></i>
-                        <a href="listaCaricatura.htm"><h5 class="mb-3">Caricaturas</h5></a>
+                        <a href="listaCaricatura.htm">
+                            <h5 class="mb-3">Caricaturas</h5>
+                        </a>
                         <c:forEach var="dato" items="${ListaCaricatura}">
                             <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Caricatura}</h1>
                         </c:forEach>
@@ -142,7 +146,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-film fa-4x text-primary mb-4"></i>
-                        <a href="listaPelicula.htm"><h5 class="mb-3">Peliculas</h5></a>
+                        <a href="listaPelicula.htm">
+                            <h5 class="mb-3">Peliculas</h5>
+                        </a>
                         <c:forEach var="dato" items="${ListaPelicula}">
                             <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Pelicula}</h1>
                         </c:forEach>
@@ -151,7 +157,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-tv fa-4x text-primary mb-4"></i>
-                        <a href="listaSerie.htm"><h5 class="mb-3">Series</h5></a>
+                        <a href="listaSerie.htm">
+                            <h5 class="mb-3">Series</h5>
+                        </a>
                         <c:forEach var="dato" items="${ListaSerie}">
                             <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Serie}</h1>
                         </c:forEach>
@@ -267,34 +275,29 @@
 
                 <div class="project-item border rounded h-100 p-4" data-dot="04">
                     <h6>Busqueda</h6>
-                    <span>Al contener varios registros, en cada una de las tablas se tendra un DATATABLES para que asi
+                    <span>Al contener varios registros, en cada una de las tablas se tendra una barra de busqueda para
+                        que asi
                         se pueda buscar el registro.</span>
                 </div>
 
                 <div class="project-item border rounded h-100 p-4" data-dot="05">
-                    <h6>Codigo QR</h6>
-                    <span>Cada uno de los registros contara con un codigo QR, con este el usuario podra ver los datos
-                        desde el celular.</span>
-                </div>
-
-                <div class="project-item border rounded h-100 p-4" data-dot="06">
                     <h6>Navegacion desde el Celular</h6>
                     <span>Desde el celular se podra navegar en la pagina, asi como insertar registros, para esto se
                         usara un codigo QR.</span>
                 </div>
 
-                <div class="project-item border rounded h-100 p-4" data-dot="07">
+                <div class="project-item border rounded h-100 p-4" data-dot="06">
                     <h6>Exportacion</h6>
                     <span>Se podra realizar una exportacion de los registros tanto en PDF como en Excel y en XML.</span>
                 </div>
 
-                <div class="project-item border rounded h-100 p-4" data-dot="08">
+                <div class="project-item border rounded h-100 p-4" data-dot="07">
                     <h6>Vista de Cambios</h6>
                     <span>Cada tabla contara con una vista de cambios, en esta tabla se vera reflejado cada modificacion
                         de registros.</span>
                 </div>
 
-                <div class="project-item border rounded h-100 p-4" data-dot="09">
+                <div class="project-item border rounded h-100 p-4" data-dot="08">
                     <h6>Usuarios</h6>
                     <span>Para el uso del sistema, se debera contar con un usuario para el loggeo, asimismo podra verse
                         los datos del usuario.</span>
@@ -305,15 +308,14 @@
     <!-- Acciones End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-body footer mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container-fluid copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Series</a>, CU UAEM Valle de Chalco.
+                        &copy; <a href="index.htm" target="_blank">Series</a>, CU UAEM Valle de Chalco.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By: Raúl Gerónimo </a>
                         <br>Proyecto de Vacaciones
                     </div>

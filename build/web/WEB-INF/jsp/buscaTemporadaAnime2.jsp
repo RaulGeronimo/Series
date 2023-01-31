@@ -70,7 +70,8 @@
             <h1 class="display-4 text-white animated slideInDown mb-3">Anime</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;" href="Anime.htm">Anime</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a style="color: #0d6efd;"
+                            href="Anime.htm">Anime</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Caricaturas.htm">Caricaturas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Peliculas.htm">Peliculas</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="Series.htm">Series</a></li>
@@ -95,7 +96,8 @@
                     Vista</a>
             </div>
             <div style="float: left">
-                <p>Temporadas: ${Conteo[0].Temporada}, <!-- Peliculas: ${Pelicula[0].Temporada}, --> Promedio: ${Conteo[0].Promedio}</p>
+                <p>Temporadas: ${Conteo[0].Temporada},
+                    <!-- Peliculas: ${Pelicula[0].Temporada}, --> Promedio: ${Conteo[0].Promedio}</p>
             </div>
         </div>
     </div>
@@ -202,6 +204,24 @@
         </c:forEach>
     </div>
     <!-- Card Fin -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="index.htm" target="_blank">Series</a>, CU UAEM Valle de Chalco.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By: Raúl Gerónimo </a>
+                        <br>Proyecto de Vacaciones
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i

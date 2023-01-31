@@ -79,19 +79,6 @@ public class controladorTemporadasCaricatura {
 
     @RequestMapping("listaTemporadaCaricatura.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Temporadas_Caricatura.idTemporada,\n"
-                + "Caricatura.Nombre AS Caricatura,\n"
-                + "Temporadas_Caricatura.Nombre,\n"
-                + "Temporadas_Caricatura.Capitulos,\n"
-                + "TIME_FORMAT(Duracion, \"%i\") AS Duracion,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 1)) AS Calificacion,\n"
-                + "DATE_FORMAT(FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "DATE_FORMAT(FechaFin, \"%d / %b / %Y\") AS FechaFin\n"
-                + "FROM Temporadas_Caricatura\n"
-                + "INNER JOIN Caricatura\n"
-                + "ON Temporadas_Caricatura.idCaricatura = Caricatura.idCaricatura\n"
-                + "ORDER BY Temporadas_Caricatura.Nombre";*/
         String temporadas_caricaturas = "SELECT * FROM Vista_TemporadasCaricatura";
         datos = this.jdbc.queryForList(temporadas_caricaturas);
         mav.addObject("Lista", datos);

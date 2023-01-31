@@ -87,7 +87,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa bi-laptop fa-4x text-primary mb-4"></i>
-                            <a href="listaAnime.htm"><h5 class="mb-3">Animes</h5></a>
+                            <a href="listaAnime.htm">
+                                <h5 class="mb-3">Animes</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaAnime}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Anime}</h1>
                             </c:forEach>
@@ -97,7 +99,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-users fa-4x text-primary mb-4"></i>
-                            <a href="listaCaricatura.htm"><h5 class="mb-3">Caricaturas</h5></a>
+                            <a href="listaCaricatura.htm">
+                                <h5 class="mb-3">Caricaturas</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaCaricatura}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Caricatura}</h1>
                             </c:forEach>
@@ -108,7 +112,9 @@
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <!-- <i class="fa fa-users fa-4x text-primary mb-4"></i> -->
                             <i class="fas fa-broom fa-4x text-primary mb-4"></i>
-                            <a href="listaClasificacion.htm"><h5 class="mb-3">Clasificación</h5></a>
+                            <a href="listaClasificacion.htm">
+                                <h5 class="mb-3">Clasificación</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaClasificacion}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Clasificacion}</h1>
                             </c:forEach>
@@ -118,7 +124,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-id-card fa-4x text-primary mb-4"></i>
-                            <a href="listaDirector.htm"><h5 class="mb-3">Directores</h5></a>
+                            <a href="listaDirector.htm">
+                                <h5 class="mb-3">Directores</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaDirector}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Director}</h1>
                             </c:forEach>
@@ -128,7 +136,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-check fa-4x text-primary mb-4"></i>
-                            <a href="listaProductora.htm"><h5 class="mb-3">Distribuidora</h5></a>
+                            <a href="listaProductora.htm">
+                                <h5 class="mb-3">Distribuidora</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaProductora}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Productora}</h1>
                             </c:forEach>
@@ -138,7 +148,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fas fa-chalkboard fa-4x text-primary mb-4"></i>
-                            <a href="listaEstudio.htm"><h5 class="mb-3">Estudios Animacion</h5></a>
+                            <a href="listaEstudio.htm">
+                                <h5 class="mb-3">Estudios Animacion</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaEstudio}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Estudio}</h1>
                             </c:forEach>
@@ -148,7 +160,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fas fa-city fa-4x text-primary mb-4"></i>
-                            <a href="listaGenero.htm"><h5 class="mb-3">Genero de Peliculas</h5></a>
+                            <a href="listaGenero.htm">
+                                <h5 class="mb-3">Genero de Peliculas</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaGenero}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Genero}</h1>
                             </c:forEach>
@@ -158,7 +172,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-film fa-4x text-primary mb-4"></i>
-                            <a href="listaPelicula.htm"><h5 class="mb-3">Peliculas</h5></a>
+                            <a href="listaPelicula.htm">
+                                <h5 class="mb-3">Peliculas</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaPelicula}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Pelicula}</h1>
                             </c:forEach>
@@ -168,7 +184,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-globe-asia fa-4x text-primary mb-4"></i>
-                            <a href="listaPais.htm"><h5 class="mb-3">Pais</h5></a>
+                            <a href="listaPais.htm">
+                                <h5 class="mb-3">Pais</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaPais}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Pais}</h1>
                             </c:forEach>
@@ -178,7 +196,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fab fa-studiovinari fa-4x text-primary mb-4"></i>
-                            <a href="listaProductora.htm"><h5 class="mb-3">Productoras</h5></a>
+                            <a href="listaProductora.htm">
+                                <h5 class="mb-3">Productoras</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaProductora}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Productora}</h1>
                             </c:forEach>
@@ -188,7 +208,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-tv fa-4x text-primary mb-4"></i>
-                            <a href="listaSerie.htm"><h5 class="mb-3">Series</h5></a>
+                            <a href="listaSerie.htm">
+                                <h5 class="mb-3">Series</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaSerie}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Serie}</h1>
                             </c:forEach>
@@ -198,7 +220,9 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="fact-item bg-light rounded text-center h-100 p-5">
                             <i class="fa fa-users-cog fa-4x text-primary mb-4"></i>
-                            <a href="listaUsuario.htm"><h5 class="mb-3">Usuarios</h5></a>
+                            <a href="listaUsuario.htm">
+                                <h5 class="mb-3">Usuarios</h5>
+                            </a>
                             <c:forEach var="dato" items="${ListaUsuario}">
                                 <h1 class="display-5 mb-0" data-toggle="counter-up">${dato.Usuario}</h1>
                             </c:forEach>
@@ -211,15 +235,14 @@
     <!-- Servicios End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-body footer mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container-fluid copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Series</a>, CU UAEM Valle de Chalco.
+                        &copy; <a href="index.htm" target="_blank">Series</a>, CU UAEM Valle de Chalco.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By: Raúl Gerónimo </a>
                         <br>Proyecto de Vacaciones
                     </div>

@@ -39,7 +39,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -65,7 +65,7 @@
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-3 mb-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header py-5 mb-3 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <h1 class="display-4 text-white animated slideInDown mb-3">Estudios de Animación</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -106,7 +106,8 @@
                     <div class="card-header text-white d-flex justify-content-between align-items-center text-center">
                         ${dato.Nombre}
                         <div style="float: right;">
-                            <a target="_blank" href="buscarEstudio2.htm?idEstudio=${dato.idEstudio}" class="btn btn-success">
+                            <a target="_blank" href="buscarEstudio2.htm?idEstudio=${dato.idEstudio}"
+                                class="btn btn-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-search" viewBox="0 0 16 16">
                                     <path
@@ -117,7 +118,7 @@
                                 onclick="return confirm('¿Estás seguro que deseas eliminar el registro?')"
                                 class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                         </div>
-                        
+
                     </div>
                     <img src="${dato.Imagen}" style="margin-left: auto; margin-right: auto; height: 300px;"
                         alt="imagen del Estudio">
@@ -136,6 +137,24 @@
     </div>
     <!-- Card Fin -->
 
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="index.htm" target="_blank">Series</a>, CU UAEM Valle de Chalco.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By: Raúl Gerónimo </a>
+                        <br>Proyecto de Vacaciones
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>

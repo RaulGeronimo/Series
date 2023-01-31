@@ -28,16 +28,6 @@ public class controladorAuditoriaTemporadasEmision {
 
     @RequestMapping("listaAuditoriaTemporadasEmision.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT \n"
-                + "id,\n"
-                + "Nombre,\n"
-                + "DATE_FORMAT(FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "DATE_FORMAT(FechaFin, \"%d / %b / %Y\") AS FechaFin,\n"
-                + "Usuario,\n"
-                + "DATE_FORMAT(Modificado, \"%d / %b / %Y - %r\") AS Modificado,\n"
-                + "Proceso,\n"
-                + "idTemporada\n"
-                + "FROM Auditoria_Temporadas_Emision";*/
         String cambios = "SELECT * FROM Vista_Cambios_Temporadas_Emision";
         datos = this.jdbc.queryForList(cambios);
         mav.addObject("Lista", datos);

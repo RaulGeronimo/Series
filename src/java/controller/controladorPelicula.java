@@ -130,33 +130,6 @@ public class controladorPelicula {
 
     @RequestMapping("listaPelicula.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Peliculas.idPelicula,\n"
-                + "Peliculas.Nombre,\n"
-                + "REPLACE(Peliculas.OtrosNombres, 'Ã±', 'ñ') AS NombreSecundario,\n"
-                + "Productora.Nombre AS Productora,\n"
-                + "Distribuidora.Nombre AS Distribuidora,\n"
-                + "DATE_FORMAT(Peliculas.Duracion, \"%Hh %im\") AS Duracion,\n"
-                + "Genero.Nombre AS Genero,\n"
-                + "Peliculas.Tipo,\n"
-                + "Clasificacion.Nombre AS Clasificacion,\n"
-                + "DATE_FORMAT(Peliculas.Estreno, \"%d / %b / %Y\") AS Estreno,\n"
-                + "DATE_FORMAT(Peliculas.EstrenoMexico, \"%d / %b / %Y\") AS EstrenoMexico,\n"
-                + "IF(Peliculas.Calificacion = 10, FORMAT(Peliculas.Calificacion, 0),FORMAT(Peliculas.Calificacion, 2)) AS Calificacion,\n"
-                + "Director.NombreArtistico AS Director,\n"
-                + "IF(Peliculas.Estreno IS NULL, 'Proximamente', TIMESTAMPDIFF(Year, Peliculas.Estreno, NOW())) AS Anios,\n"
-                + "Peliculas.Portada\n"
-                + "FROM Peliculas\n"
-                + "INNER JOIN Productora\n"
-                + "ON Productora.idProductora = Peliculas.idProductora\n"
-                + "INNER JOIN Distribuidora\n"
-                + "ON Distribuidora.idDistribuidora = Peliculas.idDistribuidora\n"
-                + "INNER JOIN Genero\n"
-                + "ON Genero.idGenero = Peliculas.Genero\n"
-                + "INNER JOIN Clasificacion\n"
-                + "ON Clasificacion.idClasificacion = Peliculas.Clasificacion\n"
-                + "INNER JOIN Director\n"
-                + "ON Peliculas.idDirector = Director.idDirector";*/
         String peliculas = "SELECT * FROM Vista_Peliculas";
         datos = this.jdbc.queryForList(peliculas);
         mav.addObject("Lista", datos);

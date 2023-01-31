@@ -58,25 +58,7 @@ public class controladorAnime {
     List datos;
 
     @RequestMapping("listaAnime.htm")
-    public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Anime.idAnime,\n"
-                + "TRIM(Anime.Nombre) AS Nombre,\n"
-                + "TRIM(Anime.OtrosNombres) AS OtrosNombres,\n"
-                + "Anime.Genero, \n"
-                + "Temporadas_Anime.Portada,\n"
-                + "COUNT((Temporadas_Anime.idTemporada)) AS Temporadas,\n"
-                + "SUM(Temporadas_Anime.Capitulos) AS Capitulos,\n"
-                + "DATE_FORMAT((MIN(Temporadas_Anime.FechaInicio)), \"%d / %b / %Y\") As FechaInicio,\n"
-                + "IF(Temporadas_Anime.FechaFin IS NULL AND Temporadas_Anime.FechaInicio IS NULL,' ' ,IF(MAX(Temporadas_Anime.FechaInicio > NOW()), DATE_FORMAT(MAX(Temporadas_Anime.FechaFin), \"%d / %b / %Y\"), (IF (MIN(Temporadas_Anime.FechaFin IS NOT NULL), (DATE_FORMAT((MAX(Temporadas_Anime.FechaFin)), \"%d / %b / %Y\")), (IF(NOW() < Temporadas_Anime.FechaInicio, \" \", DATE_FORMAT(NOW(), \"%d / %b / %Y\") )))))) As FechaFin,\n"
-                + "IF(Temporadas_Anime.FechaFin IS NULL AND Temporadas_Anime.FechaInicio IS NULL, ' ', IF(MAX(Temporadas_Anime.FechaInicio > NOW()), \"Estreno\", IF (MIN(Temporadas_Anime.FechaFin IS NOT NULL), \"Finalizado\", \"Emision\"))) AS Estado,\n"
-                + "IFNULL((IF((AVG(Temporadas_Anime.Calificacion)) = 10, FORMAT((AVG(Temporadas_Anime.Calificacion)), 0),FORMAT((AVG(Temporadas_Anime.Calificacion)), 2))), \" \") AS Promedio\n"
-                + "FROM Anime \n"
-                + "LEFT JOIN Temporadas_Anime\n"
-                + "ON Temporadas_Anime.idAnime = Anime.idAnime\n"
-                + "AND Temporadas_Anime.Duracion <= '00:59:00'\n"
-                + "GROUP BY (Anime.idAnime)";*/
-        
+    public ModelAndView Listar() {        
         String anime = "SELECT * FROM Vista_Animes";
         datos = this.jdbc.queryForList(anime);
         mav.addObject("Lista", datos);
@@ -88,39 +70,6 @@ public class controladorAnime {
     @RequestMapping(value = "buscaTemporadaAnime.htm", method = RequestMethod.GET)
     public ModelAndView Buscar(HttpServletRequest request) {
         idAnime = Integer.parseInt(request.getParameter("idAnime"));
-        /*String sql = "SELECT\n"
-                + "Temporadas_Anime.idTemporada,\n"
-                + "TRIM(Anime.Nombre) AS Anime,\n"
-                + "TRIM(Temporadas_Anime.Nombre) AS Nombre,\n"
-                + "TRIM(Temporadas_Anime.OtrosNombres) AS OtrosNombres,\n"
-                + "Temporadas_Anime.Capitulos,\n"
-                + "IF(DATE_FORMAT(Duracion, \"%H\") = '00', DATE_FORMAT(Temporadas_Anime.Duracion, \"%i\"), DATE_FORMAT(Temporadas_Anime.Duracion, \"%Hh %im\")) AS Duracion,\n"
-                + "Temporadas_Anime.Idioma,\n"
-                + "REPLACE(Temporadas_Emision.Nombre, \"Otonio\", \"Otoño\") AS Emision,\n"
-                + "CASE\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Monday' THEN 'Lunes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Tuesday' THEN 'Martes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Wednesday' THEN 'Miercoles'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Thursday' THEN 'Jueves'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Friday' THEN 'Viernes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Saturday' THEN 'Sabado'\n"
-                + "ELSE 'Domingo'\n"
-                + "END AS DiaEmision,\n"
-                + "DATE_FORMAT(Temporadas_Anime.FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "IF(Temporadas_Anime.FechaInicio > NOW(), \"\", IFNULL((DATE_FORMAT(Temporadas_Anime.FechaFin, \"%d / %b / %Y\")), (DATE_FORMAT(NOW(), \"%d / %b / %Y\")))) AS FechaFin,\n"
-                + "IFNULL((TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, Temporadas_Anime.FechaFin)), TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, NOW())) AS Semanas,\n"
-                + "TIMESTAMPDIFF(YEAR, Temporadas_Anime.FechaInicio, NOW()) AS Años,\n"
-                + "EstudioAnimacion.Nombre AS Estudio,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 2)) AS Calificacion,\n"
-                + "Temporadas_Anime.Portada\n"
-                + "FROM Temporadas_Anime\n"
-                + "INNER JOIN Anime\n"
-                + "ON Temporadas_Anime.idAnime = Anime.idAnime\n"
-                + "INNER JOIN Temporadas_Emision\n"
-                + "ON Temporadas_Anime.idTemporadaEmision = Temporadas_Emision.idTemporada\n"
-                + "INNER JOIN EstudioAnimacion\n"
-                + "ON Temporadas_Anime.idEstudio = EstudioAnimacion.idEstudio\n"
-                + "AND Anime.idAnime = " + idAnime;*/
         
         String anime = "SELECT * FROM Vista_TemporadasAnime WHERE idAnime = " + idAnime + " ORDER BY Inicio";
         datos = this.jdbc.queryForList(anime);
@@ -139,83 +88,12 @@ public class controladorAnime {
     @RequestMapping(value = "buscaTemporadaAnime2.htm", method = RequestMethod.GET)
     public ModelAndView Buscar2(HttpServletRequest request) {
         idAnime = Integer.parseInt(request.getParameter("idAnime"));
-        /*String sql = "SELECT\n"
-                + "Temporadas_Anime.idTemporada,\n"
-                + "TRIM(Anime.Nombre) AS Anime,\n"
-                + "TRIM(Temporadas_Anime.Nombre) AS Nombre,\n"
-                + "TRIM(Temporadas_Anime.OtrosNombres) AS OtrosNombres,\n"
-                + "Temporadas_Anime.Capitulos,\n"
-                + "IF(DATE_FORMAT(Duracion, \"%H\") = '00', DATE_FORMAT(Temporadas_Anime.Duracion, \"%i min\"), DATE_FORMAT(Temporadas_Anime.Duracion, \"%Hh %im\")) AS Duracion,\n"
-                + "Temporadas_Anime.Idioma,\n"
-                + "REPLACE(Temporadas_Emision.Nombre, \"Otonio\", \"Otoño\") AS Emision,\n"
-                + "CASE\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Monday' THEN 'Lunes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Tuesday' THEN 'Martes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Wednesday' THEN 'Miercoles'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Thursday' THEN 'Jueves'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Friday' THEN 'Viernes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Saturday' THEN 'Sabado'\n"
-                + "ELSE 'Domingo'\n"
-                + "END AS DiaEmision,\n"
-                + "DATE_FORMAT(Temporadas_Anime.FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "IF(Temporadas_Anime.FechaInicio > NOW(), \"\", IFNULL((DATE_FORMAT(Temporadas_Anime.FechaFin, \"%d / %b / %Y\")), (DATE_FORMAT(NOW(), \"%d / %b / %Y\")))) AS FechaFin,\n"
-                + "IFNULL((TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, Temporadas_Anime.FechaFin)), TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, NOW())) AS Semanas,\n"
-                + "TIMESTAMPDIFF(YEAR, Temporadas_Anime.FechaInicio, NOW()) AS Años,\n"
-                + "EstudioAnimacion.Nombre AS Estudio,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 2)) AS Calificacion,\n"
-                + "Temporadas_Anime.Portada\n"
-                + "FROM Temporadas_Anime\n"
-                + "INNER JOIN Anime\n"
-                + "ON Temporadas_Anime.idAnime = Anime.idAnime\n"
-                + "INNER JOIN Temporadas_Emision\n"
-                + "ON Temporadas_Anime.idTemporadaEmision = Temporadas_Emision.idTemporada\n"
-                + "INNER JOIN EstudioAnimacion\n"
-                + "ON Temporadas_Anime.idEstudio = EstudioAnimacion.idEstudio\n"
-                + "AND Anime.idAnime = " + idAnime + "\n"
-                + "AND Temporadas_Anime.Duracion <= '00:59:00'\n"
-                + "ORDER BY (Temporadas_Anime.FechaInicio)";*/
         
         String anime = "SELECT * FROM Vista_TemporadasAnime WHERE idAnime = " + idAnime + " AND Duration <= '00:59:00' ORDER BY Inicio";
         datos = this.jdbc.queryForList(anime);
         mav.addObject("Lista", datos);
 
         //Peliculas
-        /*String peli = "SELECT\n"
-                + "Temporadas_Anime.idTemporada,\n"
-                + "TRIM(Anime.Nombre) AS Anime,\n"
-                + "TRIM(Temporadas_Anime.Nombre) AS Nombre,\n"
-                + "TRIM(Temporadas_Anime.OtrosNombres) AS OtrosNombres,\n"
-                + "Temporadas_Anime.Capitulos,\n"
-                + "IF(DATE_FORMAT(Duracion, \"%H\") = '00', DATE_FORMAT(Temporadas_Anime.Duracion, \"%i min\"), DATE_FORMAT(Temporadas_Anime.Duracion, \"%Hh %im\")) AS Duracion,\n"
-                + "Temporadas_Anime.Idioma,\n"
-                + "REPLACE(Temporadas_Emision.Nombre, \"Otonio\", \"Otoño\") AS Emision,\n"
-                + "CASE\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Monday' THEN 'Lunes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Tuesday' THEN 'Martes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Wednesday' THEN 'Miercoles'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Thursday' THEN 'Jueves'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Friday' THEN 'Viernes'\n"
-                + "WHEN DAYNAME(Temporadas_Anime.FechaInicio) = 'Saturday' THEN 'Sabado'\n"
-                + "ELSE 'Domingo'\n"
-                + "END AS DiaEmision,\n"
-                + "DATE_FORMAT(Temporadas_Anime.FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "IF(Temporadas_Anime.FechaInicio > NOW(), \"\", IFNULL((DATE_FORMAT(Temporadas_Anime.FechaFin, \"%d / %b / %Y\")), (DATE_FORMAT(NOW(), \"%d / %b / %Y\")))) AS FechaFin,\n"
-                + "IFNULL((TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, Temporadas_Anime.FechaFin)), TIMESTAMPDIFF(WEEK,Temporadas_Anime.FechaInicio, NOW())) AS Semanas,\n"
-                + "TIMESTAMPDIFF(YEAR, Temporadas_Anime.FechaInicio, NOW()) AS Años,\n"
-                + "EstudioAnimacion.Nombre AS Estudio,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 2)) AS Calificacion,\n"
-                + "Temporadas_Anime.Portada\n"
-                + "FROM Temporadas_Anime\n"
-                + "INNER JOIN Anime\n"
-                + "ON Temporadas_Anime.idAnime = Anime.idAnime\n"
-                + "INNER JOIN Temporadas_Emision\n"
-                + "ON Temporadas_Anime.idTemporadaEmision = Temporadas_Emision.idTemporada\n"
-                + "INNER JOIN EstudioAnimacion\n"
-                + "ON Temporadas_Anime.idEstudio = EstudioAnimacion.idEstudio\n"
-                + "AND Anime.idAnime = " + idAnime + "\n"
-                + "AND Temporadas_Anime.Duracion > '00:59:00'\n"
-                + "ORDER BY (Temporadas_Anime.FechaInicio)";*/
-        
         String panime = "SELECT * FROM Vista_TemporadasAnime WHERE idAnime = " + idAnime + " AND Duration > '00:59:00' ORDER BY Inicio";
         datos = this.jdbc.queryForList(panime);
         mav.addObject("Lista1", datos);

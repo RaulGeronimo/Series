@@ -56,22 +56,6 @@ public class controladorUsuario {
 
     @RequestMapping("listaUsuario.htm")
     public ModelAndView Listar() {
-        //String sql = "SELECT * from Album";
-        /*String sql = "SELECT\n"
-                + "idUsuario,\n"
-                + "Nombre,\n"
-                + "Paterno,\n"
-                + "Materno,\n"
-                + "DATE_FORMAT(FechaNacimiento, \"%d / %b / %Y\") AS FechaNacimiento,\n"
-                + "TIMESTAMPDIFF(Year, FechaNacimiento, NOW()) AS Edad,\n"
-                + "CONCAT(\"(\", LEFT(Celular, 3), \") \", MID(Celular, 4, 3), \"-\", MID(Celular, 7, 4)) AS Celular,\n"
-                + "IF(Sexo = 'H', 'Hombre', 'Mujer') AS Sexo,\n"
-                + "Correo,\n"
-                + "Username,\n"
-                + "IF((CONCAT_WS('-', YEAR(NOW()), MONTH(FechaNacimiento), DAY(FechaNacimiento))) > NOW(),\n"
-                + "(DATEDIFF((CONVERT((CONCAT_WS('-', YEAR(NOW()), MONTH(FechaNacimiento), DAY(FechaNacimiento))), DATE)), NOW())),\n"
-                + "(DATEDIFF((CONVERT((CONCAT_WS('-', YEAR(ADDDATE(CURDATE(), INTERVAL 1 YEAR)), MONTH(FechaNacimiento), DAY(FechaNacimiento))), DATE)), NOW()))) AS Cumple\n"
-                + "FROM Usuario";*/
         String usuario = "SELECT * FROM Vista_Usuarios";
         datos = this.jdbc.queryForList(usuario);
         mav.addObject("Lista", datos);

@@ -50,9 +50,6 @@ public class controladorTemporadasSeries {
         return new ModelAndView("redirect:/altaTemporadaSerie.htm");
     }
     
-    
-    
-    
     /////////////EMISION
     //Metodo para las vistas - METODO PARA OBTENER VISTAS
     @RequestMapping(value = "altaTemporadaSerieEmision.htm", method = RequestMethod.GET)
@@ -81,19 +78,6 @@ public class controladorTemporadasSeries {
 
     @RequestMapping("listaTemporadaSerie.htm")
     public ModelAndView Listar() {
-        /*String sql = "SELECT\n"
-                + "Temporadas_Series.idTemporada,\n"
-                + "Series.Nombre AS Serie,\n"
-                + "Temporadas_Series.Nombre,\n"
-                + "Temporadas_Series.Capitulos,\n"
-                + "TIME_FORMAT(Duracion, \"%i\") AS Duracion,\n"
-                + "IF(Calificacion = 10, FORMAT(Calificacion, 0),FORMAT(Calificacion, 1)) AS Calificacion,\n"
-                + "DATE_FORMAT(FechaInicio, \"%d / %b / %Y\") AS FechaInicio,\n"
-                + "DATE_FORMAT(FechaFin, \"%d / %b / %Y\") AS FechaFin\n"
-                + "FROM Temporadas_Series\n"
-                + "INNER JOIN Series\n"
-                + "ON Temporadas_Series.idSerie = Series.idSerie\n"
-                + "ORDER BY Series.Nombre";*/
         String temporadas_series = "SELECT * FROM Vista_TemporadasSerie";
         datos = this.jdbc.queryForList(temporadas_series);
         mav.addObject("Lista", datos);
@@ -137,11 +121,6 @@ public class controladorTemporadasSeries {
         this.jdbc.update(sql, t.getIdSerie(), t.getNombre(), t.getCapitulos(), t.getDuracion(), t.getCalificacion(), t.getFechaInicio(), t.getFechaFin(), idTemporada);
         return new ModelAndView("redirect:/listaTemporadaSerie.htm");
     }
-    
-    
-    
-    
-    
     
     /////Emision
     @RequestMapping(value = "editarTemporadaSerieEmision.htm", method = RequestMethod.GET)

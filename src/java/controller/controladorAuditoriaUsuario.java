@@ -29,23 +29,6 @@ public class controladorAuditoriaUsuario {
 
     @RequestMapping("listaAuditoriaUsuario.htm")
     public ModelAndView Listar() {
-        //String sql = "SELECT * from Album";
-        /*String sql = "SELECT\n"
-                + "id,\n"
-                + "Nombre,\n"
-                + "Paterno,\n"
-                + "Materno,\n"
-                + "DATE_FORMAT(FechaNacimiento, \"%d / %b / %Y\") AS FechaNacimiento,\n"
-                + "CONCAT(\"(\", LEFT(Celular, 3), \") \", MID(Celular, 4, 3), \"-\", MID(Celular, 7, 4)) AS Celular,\n"
-                + "IF(Sexo = 'H', 'Hombre', 'Mujer') AS Sexo,\n"
-                + "Correo,\n"
-                + "Username,\n"
-                + "Password,\n"
-                + "DATE_FORMAT(Modificado, \"%d / %b / %Y - %r\") AS Modificado,\n"
-                + "Proceso,\n"
-                + "Usuario,\n"
-                + "idUsuario\n"
-                + "FROM Auditoria_Usuario";*/
         String cambios = "SELECT * FROM Vista_Cambios_Usuario";
         datos = this.jdbc.queryForList(cambios);
         mav.addObject("Lista", datos);
