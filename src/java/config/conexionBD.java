@@ -16,7 +16,7 @@ public class conexionBD {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Series");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/Series?sessionVariables=LC_TIME_NAMES='es_MX'");
         dataSource.setUsername("root");
         dataSource.setPassword("");
         return dataSource;
