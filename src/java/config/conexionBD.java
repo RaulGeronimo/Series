@@ -18,7 +18,7 @@ public class conexionBD {
         
         dataSource.setUrl("jdbc:mysql://localhost:3306/Series?sessionVariables=LC_TIME_NAMES='es_MX'");
         dataSource.setUsername("root");
-        dataSource.setPassword("");
+        //dataSource.setPassword("1829301");
         return dataSource;
     }
 }
