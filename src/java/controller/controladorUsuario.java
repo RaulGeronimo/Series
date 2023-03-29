@@ -39,7 +39,7 @@ public class controladorUsuario {
     @RequestMapping(value = "altaUsuario.htm", method = RequestMethod.POST)
     public ModelAndView Agregar(Usuario u, HttpServletRequest request) {
         username = request.getParameter("correo");
-        String sql = "SELECT * FROM USUARIO WHERE correo='" + username + "'";
+        String sql = "SELECT * FROM Usuario WHERE correo='" + username + "'";
         datos = this.jdbc.queryForList(sql);
         
         if (datos.isEmpty()) {

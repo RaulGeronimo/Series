@@ -16,9 +16,10 @@ public class conexionBD {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Series?sessionVariables=LC_TIME_NAMES='es_MX'");
-        dataSource.setUsername("root");
-        //dataSource.setPassword("1829301");
+        /*dataSource.setUrl("jdbc:mysql://localhost:3306/Series?sessionVariables=LC_TIME_NAMES='es_MX'");*/
+        dataSource.setUrl("jdbc:mysql://sql9.freesqldatabase.com:3306/sql9609403?sessionVariables=LC_TIME_NAMES='es_MX'");
+        dataSource.setUsername("sql9609403");
+        dataSource.setPassword("JJkEw5GA14");
         return dataSource;
     }
 }
